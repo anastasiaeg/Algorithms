@@ -40,6 +40,14 @@ public class TestSorting {
 	
 	@Test
 	public void testMergeSort() {
+		assertTrue(Arrays.equals(ogInt, intArray));
+		assertTrue(Arrays.equals(ogString, stringArray));
 		
+		intArray = integer.mergeSort(intArray);
+		assertFalse(Arrays.equals(ogInt, intArray));
+		assertEquals("[1, 2, 3, 4, 5, 6, 7, 8, 9]", Arrays.toString(intArray));
+		stringArray = string.mergeSort(stringArray);
+		assertFalse(Arrays.equals(ogString, stringArray));
+		assertEquals("[abc, apple, xan, zaa, zz]", Arrays.toString(stringArray));
 	}
 }
